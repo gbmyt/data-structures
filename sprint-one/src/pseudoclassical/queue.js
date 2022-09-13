@@ -10,10 +10,10 @@ Queue.prototype.enqueue = function(value) {
 
 Queue.prototype.dequeue = function() {
   var oldest = Math.min(...Object.keys(this.storage));
-  var popped = this.storage[oldest];
+  var dequeued = this.storage[oldest];
 
   delete this.storage[oldest];
-  return popped;
+  return dequeued;
 };
 
 Queue.prototype.size = function() {

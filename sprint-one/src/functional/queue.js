@@ -1,7 +1,5 @@
 var Queue = function() {
   var someInstance = {};
-
-  // Use an object with numeric keys to store values
   var storage = {};
   var index = 0;
 
@@ -12,10 +10,10 @@ var Queue = function() {
 
   someInstance.dequeue = function() {
     var oldest = Math.min(...Object.keys(storage));
-    var popped = storage[oldest];
+    var dequeued = storage[oldest];
 
     delete storage[oldest];
-    return popped;
+    return dequeued;
   };
 
   someInstance.size = function() {
